@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="class">
+        <attribute name="nameID" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="score3Jednakowe" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="score4Jednakowe" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreCzworki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreDuzyStrit" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreDwojki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreFul" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreGeneral" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreJedynki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreJoker" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreMalyStrit" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scorePiatki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreSum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreSzansa" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreSzostki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scoreTrojki" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="token" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="rzuty" toMany="YES" deletionRule="Nullify" destinationEntity="Rzut" inverseName="gracz" inverseEntity="Rzut" syncable="YES"/>
+    </entity>
+    <entity name="Rzut" representedClassName="Rzut" syncable="YES" codeGenerationType="class">
+        <attribute name="kosc1" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kosc2" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kosc3" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kosc4" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kosc5" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="gracz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="rzuty" inverseEntity="Player" syncable="YES"/>
+    </entity>
+    <entity name="Tura" representedClassName="Tura" syncable="YES" codeGenerationType="class">
+        <attribute name="numer" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Player" positionX="-2834" positionY="-1" width="128" height="315"/>
+        <element name="Rzut" positionX="-2655" positionY="0" width="128" height="135"/>
+        <element name="Tura" positionX="-2727" positionY="153" width="128" height="60"/>
+    </elements>
+</model>
